@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=ADM Radio
+Type=Application
+Icon=/home/alectramell/Desktop/radio/radio.svg
+Exec=bash /home/alectramell/Desktop/radio/radio.sh
+Terminal=false
