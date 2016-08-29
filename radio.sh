@@ -7,9 +7,20 @@ WHEREAMI=$(pwd)
 
 clear
 
-notify-send --urgency="critical" --icon="/home/alectramell/Desktop/radio/radio.svg" "ADM Radio" "Playing.."
-mplayer -playlist /home/alectramell/Desktop/radio/aaa.m3u
+TOD=$(date "+%A %r")
 
-zenity --text-info --title="ADM Radio" --ok-label="Close" --html --url="" --width="200" --height="300" && killall mplayer
+clear
+
+play() {
+	
+	clear
+	wget https://github.com/alectramell/radio/raw/master/aaa.m3u -O /home/$USERNAME/.aaa.m3u
+	clear
+	mplayer -shuffle -playlist /home/$USERNAME/.aaa.m3u
+}
+
+clear
+
+play
 
 clear
